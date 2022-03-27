@@ -34,8 +34,8 @@ public class QuizController {
 		return new ResponseEntity<List<Quiz>>(quiz, HttpStatus.OK);
 	}
 
-	// requests the controller to get the quiz by quizID
-	// http://localhost:8082/OnlineQuiz/Quiz/getQuiz
+	// requests the controller to get the quiz by quizID.
+	// http://localhost:8082/OnlineQuiz/Quiz/getQuiz.
 	@GetMapping("/getQuiz/{quizId}")
 	public ResponseEntity<Quiz> findQuizById(@PathVariable("quizId") Integer quizId) throws QuizIdNotFoundException {
 		List<Quiz> existingQuiz = partServices.getAllQuiz();
